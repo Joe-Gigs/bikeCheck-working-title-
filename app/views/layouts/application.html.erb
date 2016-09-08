@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>BikeCheck v0.0.1</title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   </head>
+   <body>
+      <nav class="navbar navbar-light bgThemeColor">
+         <div class="nav navbar-nav">
+            <a class="nav-item nav-link" href="#">Something<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Something</a>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>  
+         </div>
+      </nav>
+      <%= yield %>
+   </body>
+</html>
