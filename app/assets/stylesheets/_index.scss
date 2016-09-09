@@ -2,12 +2,16 @@ body {
 	background-color: #A4B8C4
 }
 
+li {
+	color: #C9DAEA
+}
 .bgThemeColor {
 	background-color: #242F40;
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color: #DFF8EB;
+	float: right;
+	color: #C9DAEA;
 	}
 
 #console-view {
@@ -22,12 +26,27 @@ body {
 
 .bgColorDark {
 	  background-color: #191516;
-    width: 50%;
+    width: 60%;
     border-width: 0 2px;
     margin-top: 10px;
-		margin-left: 50px;
-		height: 42vh;
+    margin-left: 70px;
+    height: 42vh;
 }
 
+.bikesBox {
+	margin-top: 10px;
+	margin-left: 50px;
+	height: 45vh;
+  background-color: #C9DAEA;
+  width: 20%;
+}
+
+.safetyCheck {
+	margin-top: 10px;
+	margin-left: 50px;
+	height: 43vh;
+  background-color: #C9DAEA;
+  width: 20%;
+	}
 }
 

@@ -1,10 +1,14 @@
 <div class="col-md-12 col-lg-12 " id="console-view">
    <div class="row">
-      <div class="bgColorLight col-md-4">My bikes box</div>
-      <div class="bgColorDark col-md-4"></div>
+      <div class="bikesBox col-md-4">My bikes box</div>
+      <div class="bgColorDark col-md-4">
+        <% @bikes.each do |b|  %>
+        <%= b.brand %>
+        <% end %>
+      </div>
    </div>
    <div class="row">
-     <div class="bgColorLight col-md-4">Safety check, will render one of two views: the intial one and a check list.</div>
+     <div class="safetyCheck col-md-4">Safety check, will render one of two views: the intial one and a check list.</div>
       <div class="bgColorDark col-md-4">Test</div>
    </div>
 </div>

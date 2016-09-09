@@ -6,12 +6,21 @@ class BikesController < ApplicationController
 
 	def new
 		@bike = Bike.new
-		# respond_to :js
 	end
 
 	def create
+		@bikes = 
 		@bike = Bike.new(bike_params)
-		@bike.save
+		respond_to do |format|
+			if @bike.save
+				@bike.users << current_user if current_user
+				flash[:notice] = 'Your new app has been successfully created'
+        format.js
+			else
+				flash[:alert] = 'App not saved'
+        format.js
+      end
+   	end
 	end
 
 	def show
@@ -20,10 +29,13 @@ class BikesController < ApplicationController
 
 	def destroy
 		@bike = Bike.find(params[:id])
+		@bike.destroy
+		flash[:notice] = "Bike Deleted"
+		@apps = current_user.apps
 	end
 
 private
 	def bike_params
-		params.require(:bike).permit(:name, :type, :miles)
+		params.require(:bike).permit(:brand, :style, :mileage)
 	end
 end

@@ -8,11 +8,12 @@
    </head>
    <body>
       <nav class="navbar navbar-light bgThemeColor">
-         <div class="nav navbar-nav">
-             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>  
-            <a class="nav-item nav-link" href="#">Welcome <%= current_user.email if current_user %></a>
-            <a class="nav-item nav-link" href="#">Something</a>
-         </div>
+         <ul class="nav navbar-nav">
+             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>  
+            <li>Welcome <%= current_user.email if current_user %></li>
+            <!--add to drop down along with sign out -->
+            <li><%= link_to 'new bike', new_bike_path, remote: true%></li>
+         </ul>
       </nav>
       <%= yield %>
    </body>
