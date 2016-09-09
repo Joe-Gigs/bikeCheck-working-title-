@@ -9,9 +9,9 @@
    <body>
       <nav class="navbar navbar-light bgThemeColor">
          <div class="nav navbar-nav">
-            <a class="nav-item nav-link" href="#">Something<span class="sr-only">(current)</span></a>
+             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>  
+            <a class="nav-item nav-link" href="#">Welcome <%= current_user.email if current_user %></a>
             <a class="nav-item nav-link" href="#">Something</a>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>  
          </div>
       </nav>
       <%= yield %>

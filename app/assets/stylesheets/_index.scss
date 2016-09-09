@@ -1,28 +1,33 @@
+body {
+	background-color: #A4B8C4
+}
+
 .bgThemeColor {
 	background-color: #242F40;
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color: white;
-}
+	color: #DFF8EB;
+	}
 
 #console-view {
 
-}
-.myBikes, .test2 {
+.bgColorLight, {
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 50px;
 	height: 42vh;
-  background-color: #E5E5E5;
-  border-width: 0 2px;
-  // border-style: solid;
-  // border-color: #CCA43B;
-  width: 25%;
+  background-color: #C9DAEA;
+  width: 20%;
 }
 
+.bgColorDark {
+	  background-color: #191516;
+    width: 50%;
+    border-width: 0 2px;
+    margin-top: 10px;
+		margin-left: 50px;
+		height: 42vh;
+}
 
-
-
-
-
+}
 
