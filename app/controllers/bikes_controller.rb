@@ -1,23 +1,23 @@
 class BikesController < ApplicationController
 
 	def index
-		@bikes = Bike.all
-	end
+ 		@bikes = current_user.bikes	
+ 	end
 
 	def new
 		@bike = Bike.new
 	end
 
 	def create
-		@bikes = 
+    @bikes = current_user.bikes
 		@bike = Bike.new(bike_params)
 		respond_to do |format|
 			if @bike.save
 				@bike.users << current_user if current_user
-				flash[:notice] = 'Your new app has been successfully created'
+				flash[:notice] = 'Your new bike has been successfully created'
         format.js
 			else
-				flash[:alert] = 'App not saved'
+				flash[:alert] = 'Bike not saved'
         format.js
       end
    	end

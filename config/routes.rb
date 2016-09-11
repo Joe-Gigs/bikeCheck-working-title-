@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
   devise_for :users
   resources :bikes
+
+  get '/new_bike', to: 'bikes#new'
+  post '/new_bike', to: 'bikes#create'
 end

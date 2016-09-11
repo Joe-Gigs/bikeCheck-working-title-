@@ -1,10 +1,8 @@
 <div class="col-md-12 col-lg-12 " id="console-view">
    <div class="row">
       <div class="bikesBox col-md-4">My bikes box</div>
-      <div class="bgColorDark col-md-4">
-        <% @bikes.each do |b|  %>
-        <%= b.brand %>
-        <% end %>
+      <div class="bgColorDark col-md-4"><%=  render 'partials/user_bikes', remote: true %>
+      
       </div>
    </div>
    <div class="row">
