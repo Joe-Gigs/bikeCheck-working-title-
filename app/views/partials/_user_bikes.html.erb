@@ -1,3 +1,9 @@
-  <% @bikes.each do |b|  %>
-  <%= b.brand %>
-  <% end %>
+<ul class="list-group listStyle">
+   <% @bikes.each do |b|  %>
+   <li class="list-group-item"><%= b.brand %></li>
+      <li class="list-group-item"><%= b.style %></li>
+            <li class="list-group-item"><%= b.mileage %></li>
+
+
+   <% end %>
+</ul>
