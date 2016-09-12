@@ -9,10 +9,10 @@
    <body>
       <nav class="navbar navbar-light bgThemeColor">
          <ul class="nav navbar-nav">
-             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>  
+            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
             <li>Welcome <%= current_user.email if current_user %></li>
             <!--add to drop down along with sign out -->
-            <li><%= link_to 'new bike', new_bike_path, remote: true%></li>
+            <li></li>
          </ul>
       </nav>
       <%= yield %>

@@ -1,4 +1,4 @@
-<%= form_for @bike, url: new_bike_path, remote: true do |b| %>
+<%= form_for :bike, url: new_bike_path, remote: true do |b| %>
 <%= b.text_field :brand, placeholder: 'brand'%>
 <%= b.text_field :style, placeholder: 'style'  %>
 <%= b.text_field :mileage, placeholder: 'mileage'  %>
