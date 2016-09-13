@@ -25,6 +25,7 @@ class BikesController < ApplicationController
 
 	def show
 		@bike = Bike.find(params[:id])
+		respond_to :js
 	end
 
 	def destroy

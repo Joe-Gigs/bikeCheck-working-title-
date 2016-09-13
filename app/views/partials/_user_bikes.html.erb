@@ -1,9 +1,8 @@
 <ul class="list-group listStyle">
-   <% @bikes.each do |b|  %>
-   <li class="list-group-item"><%= b.brand %></li>
-      <li class="list-group-item"><%= b.style %></li>
-            <li class="list-group-item"><%= b.mileage %></li>
-
-
+   <% @bikes.each do |b| %>
+   <li class="list-group-item">
+      <a href="<%= "/bikes/#{b.id}" %>"data-remote="true"><%= b.brand %></a>
+   </li>
+   </a>
    <% end %>
 </ul>

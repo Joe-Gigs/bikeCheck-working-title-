@@ -33,6 +33,16 @@ li {
     height: 42vh;
 }
 
+.bikeStats {
+	  background-color: #191516;
+    width: 60%;
+    border-width: 0 2px;
+    margin-top: 10px;
+    margin-left: 70px;
+    height: 42vh;
+    color: white;
+}
+
 .bikesBox {
 	margin-top: 10px;
 	margin-left: 50px;
@@ -62,7 +72,7 @@ li {
 }
 
 .list-group-item {
-    float: left;
-}
+    border: none;
+	}
 }
 
