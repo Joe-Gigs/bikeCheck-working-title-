@@ -5,17 +5,18 @@ class SafetyChecksController < ApplicationController
 	end
 
 	def create
+		@bike = Bike.find(params[:id])
 		@safety_check = SafetyCheck.new(safe_params)
 		@safety_check.save
 	end
 
-	def alert
+	def show
 		@safety_check = SafetyCheck.find(params[:id])
 	end
 
 	private
 
 	def safe_params
-		params.require(:safety_check).permit(:alert)
+		params.require(:safety_check).permit(:alert,:bike_id)
 	end
 end
