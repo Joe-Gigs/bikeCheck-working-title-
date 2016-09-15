@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914204250) do
+ActiveRecord::Schema.define(version: 20160915191436) do
 
   create_table "bikes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "brand"
     t.string   "style"
     t.integer  "mileage"
+    t.boolean  "safe",       default: false
   end
 
   create_table "safety_checks", force: :cascade do |t|
