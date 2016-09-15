@@ -1,1 +1,5 @@
-<strong>Hey you!</strong><br> Have you performed your safety check?
+<% if @bike.safe === false %>
+<strong>Hey you!</strong><br> Looks like you haven't performed a safety check for this bike today.
+<% else %>
+Bike is looking good!
+<% end %>
