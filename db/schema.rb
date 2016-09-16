@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916161748) do
+ActiveRecord::Schema.define(version: 20160916162700) do
 
   create_table "bikes", force: :cascade do |t|
     t.datetime "created_at",                 null: false
@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 20160916161748) do
   create_table "safety_checks", force: :cascade do |t|
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
-    t.string   "alert"
-    t.boolean  "checked",           default: false
     t.integer  "bike_id"
     t.boolean  "quick_release",     default: false
     t.boolean  "wheels_spin_right", default: false
     t.boolean  "brakes",            default: false
     t.boolean  "chain",             default: false
     t.boolean  "tools",             default: false
+    t.boolean  "tire_pressure",     default: false
+    t.boolean  "tire_tread",        default: false
   end
 
   create_table "subscriptions", force: :cascade do |t|

@@ -12,6 +12,7 @@ class SafetyChecksController < ApplicationController
 
 	def show
 		@safety_check = SafetyCheck.find(params[:id])
+		respond_to :js
 	end
 
 	private

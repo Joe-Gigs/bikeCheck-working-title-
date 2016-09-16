@@ -1,0 +1,27 @@
+<%= form_for :safety_check, html: { class: "checkBox" } do |safe| %>
+<div class="form-check">
+   <label class="form-check-label">
+   <%= safe.check_box :tire_pressure %>Tire Pressure
+   </label>
+   <label class="form-check-label">
+   <%= safe.check_box :tire_tread %>Tire Treads
+   </label>
+   <label class="form-check-label">
+   <%= safe.check_box :quick_release %>Quick Release Parts
+   </label>
+   <label class="form-check-label">
+   <%= safe.check_box :wheels_spin_right %>Check Wheel Alignment
+   </label>
+</div>
+<label class="form-check-label">
+<%= safe.check_box :brakes %>Check Brake Function
+</label>
+<label class="form-check-label">
+<%= safe.check_box :chain %> Check Chain
+</label>
+<label class="form-check-label">
+<%= safe.check_box :tools %>Bring tools?
+</label>
+</div>
+<%= safe.submit 'Save' %>
+<% end %>
