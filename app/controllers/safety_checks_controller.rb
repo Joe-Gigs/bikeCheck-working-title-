@@ -1,5 +1,8 @@
 class SafetyChecksController < ApplicationController
 
+	def index
+	end
+
 	def new
 		@safety_check = SafetyCheck.new
 	end
@@ -14,6 +17,10 @@ class SafetyChecksController < ApplicationController
 	def show
 		@safety_check = SafetyCheck.find(params[:bike_id])
 		respond_to :js
+	end
+
+	def update
+		@safe_params = SafetyCheck.find(params[:id])
 	end
 
 	private

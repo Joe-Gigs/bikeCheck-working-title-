@@ -24,9 +24,12 @@ class BikesController < ApplicationController
 	end
 
 	def show
-		# @bike = Bike.find.build_profile(alert: "fuck")
 		@bike = Bike.find(params[:id])
 		respond_to :js
+	end
+
+	def update
+		@bike = Bike.find(params[:id])
 	end
 
 	def destroy
