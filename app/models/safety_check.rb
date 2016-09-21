@@ -1,5 +1,6 @@
 class SafetyCheck < ApplicationRecord
-	belongs_to :bike
+	has_many :subscriptions
+	belongs_to :bike, through: :subscriptions
 end
 
 	

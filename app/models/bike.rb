@@ -1,6 +1,5 @@
 class Bike < ApplicationRecord
 	has_many :subscriptions
   has_many :users, through: :subscriptions
-  has_one :safety_check
-
+  has_one :safety_check, through: :subscription
 end

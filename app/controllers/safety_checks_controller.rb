@@ -19,8 +19,21 @@ class SafetyChecksController < ApplicationController
 		respond_to :js
 	end
 
-	def update
-		@safe_params = SafetyCheck.find(params[:id])
+	def getMessage
+		@safety_check = SafetyCheck.find(params[:bike_id])
+		respond_to :js
+	end
+
+	def message_update
+		@safety_check = SafetyCheck.find(params[:bike_id])
+		respond_to do |format|
+			if @safety_check.update(safe_params)
+				flash[:notice] = 'Updated'
+        format.js
+       else
+        flash[:alert] = 'Something went wrong'
+      end  
+		end
 	end
 
 	private
