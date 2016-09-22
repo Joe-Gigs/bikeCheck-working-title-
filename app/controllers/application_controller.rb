@@ -5,14 +5,4 @@ class ApplicationController < ActionController::Base
   	@current_bike = Bike.find_by(params[:id])
   end
   	helper_method :current_bike
-
-  	def counter
-  		i=0
-  		if :add_safety_check
-  			i+=1
-  		end
-  	end
-		helper_method :counter
-
-
 end

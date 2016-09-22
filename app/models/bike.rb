@@ -4,7 +4,6 @@ class Bike < ApplicationRecord
   has_many :users, through: :subscriptions
   has_one :safety_check
 
-
 	def add_safety_check
   	x = SafetyCheck.create bike_id: self.id
   end
