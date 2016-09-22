@@ -10,7 +10,7 @@ class SafetyChecksController < ApplicationController
 	end
 
 	def create
-		# @bike = Bike.find(params[:bike_id])
+		@bike = Bike.find(params[:bike_id])
 		@safety_check = SafetyCheck.new(safe_params)
 		@safety_check.save
 		respond_to :js
@@ -28,14 +28,9 @@ class SafetyChecksController < ApplicationController
 
 	def message_update
 		@safety_check = SafetyCheck.find(params[:bike_id])
-		respond_to do |format|
-			if @safety_check.update(safe_params)
-				flash[:notice] = 'Updated'
-        format.js
-       else
-        flash[:alert] = 'Something went wrong'
-      end  
-		end
+		@safety_check.update(safe_params)
+		@safety_check.save
+		respond_to :js
 	end
 
 	private

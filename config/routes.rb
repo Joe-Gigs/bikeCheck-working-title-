@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   devise_for :users
   resources :bikes, except: [:new, :create] do
-    resources :safety_checks, except: [:update, :show] do
+    resources :safety_checks, except: [:update] do
     end
   end
 
