@@ -12,16 +12,15 @@
    <label class="form-check-label">
    <%= safe.check_box :wheels_spin_right %>Check Wheel Alignment
    </label>
-</div>
-<label class="form-check-label">
-<%= safe.check_box :brakes %>Check Brake Function
-</label>
-<label class="form-check-label">
-<%= safe.check_box :chain %> Check Chain
-</label>
-<label class="form-check-label">
-<%= safe.check_box :tools %>Bring tools?
-</label>
+	<label class="form-check-label">
+	<%= safe.check_box :brakes %>Check Brake Function
+	</label>
+	<label class="form-check-label">
+	<%= safe.check_box :chain %> Check Chain
+	</label>
+	<label class="form-check-label">
+	<%= safe.check_box :tools %>Bring tools?
+	</label>
 </div>
 <%= safe.submit 'Save' %>
 <% end %>
