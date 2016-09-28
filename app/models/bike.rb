@@ -1,5 +1,5 @@
 class Bike < ApplicationRecord
-	after_save :add_safety_check
+	after_create :add_safety_check
 	has_many :subscriptions
   has_many :users, through: :subscriptions
   has_one :safety_check

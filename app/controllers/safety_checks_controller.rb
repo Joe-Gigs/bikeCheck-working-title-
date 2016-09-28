@@ -21,17 +21,18 @@ class SafetyChecksController < ApplicationController
 		respond_to :js
 	end
 
-	def getMessage
+	def get_message
 		@safety_check = SafetyCheck.find(params[:bike_id])
 		respond_to :js
 	end
 
 	def message_update
 		@safety_check = SafetyCheck.find(params[:bike_id])
-		@safety_check.update(safe_params)
-		@safety_check.save
-		respond_to :js
+		if @safety_check.update_attributes(safe_params)
+				respond_to :js
+		puts "errors: #{@safety_check.errors.full_messages.to_sentence}"		
 	end
+end
 
 	private
 
