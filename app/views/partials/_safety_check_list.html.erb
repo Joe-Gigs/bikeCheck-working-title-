@@ -1,7 +1,7 @@
 <%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update', html: {class: "checkBox"}, remote: true do |safe| %>
 <div class="form-check">
-   <label class="form-check-label">
-   <%= safe.check_box :tire_pressure %>Tire Pressure
+   <label class="form-check-label squaredOne">
+   <%= safe.check_box :tire_pressure%>Tire Pressure
    </label>
    <label class="form-check-label">
    <%= safe.check_box :tire_tread %>Tire Treads
