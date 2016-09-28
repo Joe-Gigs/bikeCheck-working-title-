@@ -3,7 +3,7 @@
    <span aria-hidden="true">×</span>
    </button>
    <div class="messageHolder">
-      <% if @bike.safe === false %>
+      <% if @bike.safety_check.brakes === false %>
       <strong>Hey you!</strong><br> Looks like you haven't performed a safety check for this bike today.
       <% else %>
       Bike is looking good!

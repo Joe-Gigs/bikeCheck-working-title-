@@ -29,8 +29,8 @@ class SafetyChecksController < ApplicationController
 	def message_update
 		@safety_check = SafetyCheck.find(params[:bike_id])
 		if @safety_check.update_attributes(safe_params)
-				respond_to :js
-		puts "errors: #{@safety_check.errors.full_messages.to_sentence}"		
+		flash[:notice] = 'Bike updated'
+		respond_to :js	
 	end
 end
 
