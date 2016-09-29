@@ -27,6 +27,7 @@ class SafetyChecksController < ApplicationController
 	end
 
 	def message_update
+		@safety_checks = SafetyCheck.all
 		@safety_check = SafetyCheck.find(params[:bike_id])
 		if @safety_check.update_attributes(safe_params)
 		flash[:notice] = 'Bike updated'

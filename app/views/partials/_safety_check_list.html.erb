@@ -1,7 +1,7 @@
 <%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update', html: {class: "checkBox"}, remote: true do |safe| %>
 <div class="form-check">
-   <label class="form-check-label squaredOne">
-   <%= safe.check_box :tire_pressure%>Tire Pressure
+   <label class="form-check-label" id="tirePressure">
+   <%= safe.check_box :tire_pressure, onclick: 'test();'%>Tire Pressure
    </label>
    <label class="form-check-label">
    <%= safe.check_box :tire_tread %>Tire Treads
@@ -12,15 +12,25 @@
    <label class="form-check-label">
    <%= safe.check_box :wheels_spin_right %>Check Wheel Alignment
    </label>
-	<label class="form-check-label">
-	<%= safe.check_box :brakes %>Check Brake Function
-	</label>
-	<label class="form-check-label">
-	<%= safe.check_box :chain %> Check Chain
-	</label>
-	<label class="form-check-label">
-	<%= safe.check_box :tools %>Bring tools?
-	</label>
+   <label class="form-check-label">
+   <%= safe.check_box :brakes %>Check Brake Function
+   </label>
+   <label class="form-check-label">
+   <%= safe.check_box :chain %> Check Chain
+   </label>
+   <label class="form-check-label">
+   <%= safe.check_box :tools %>Bring tools?
+   </label>
 </div>
 <%= safe.submit 'Save' %>
 <% end %>
+<script>
+   var tire = document.getElementById('tirePressure');
+   
+   function test() {
+      alert('tire pressue box');
+
+   }
+
+   
+</script>
