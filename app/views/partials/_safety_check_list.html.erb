@@ -2,43 +2,41 @@
 <div class="form-check">
    <label class="form-check-label" id="tirePressure">
    <%= safe.hidden_field :tire_pressure %>
-   <%= safe.check_box :tire_pressure, onclick: 'test();'%>Tire Pressure
+   <%= safe.check_box :tire_pressure, checked: @bike.safety_check.tire_pressure %>Tire Pressure
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :tire_tread %>
-   <%= safe.check_box :tire_tread %>Tire Treads
+   <%= safe.check_box :tire_tread, checked: @bike.safety_check.tire_tread %>Tire Treads
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :quick_release %>
-   <%= safe.check_box :quick_release %>Quick Release Parts
+   <%= safe.check_box :quick_release, checked: @bike.safety_check.quick_release %>Quick Release Parts
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :wheels_spin_right %>
-   <%= safe.check_box :wheels_spin_right %>Check Wheel Alignment
+   <%= safe.check_box :wheels_spin_right, checked: @bike.safety_check.wheels_spin_right %>Check Wheel Alignment
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :brakes %>
-   <%= safe.check_box :brakes %>Check Brake Function
+   <%= safe.check_box :brakes, checked: @bike.safety_check.brakes %>Check Brake Function
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :chain %>
-   <%= safe.check_box :chain %> Check Chain
+   <%= safe.check_box :chain, checked: @bike.safety_check.chain %> Check Chain
    </label>
    <label class="form-check-label">
    <%= safe.hidden_field :tools %>
-   <%= safe.check_box :tools %>Bring tools?
+   <%= safe.check_box :tools, checked: @bike.safety_check.tools %>Bring tools?
    </label>
 </div>
-<%= safe.submit 'Save' %>
+<%= safe.submit 'Save', class: 'click' %>
 <% end %>
 <script>
-   var tire = document.getElementById('tirePressure');
-   
-   function test() {
-      //alert('tire pressue box');
-
-
-   }
+   $(function() {       
+    $("click").click(function() {
+        $(this).find('input:checkbox').prop("checked", true);
+    });
+});
 
    
 </script>

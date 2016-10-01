@@ -5,4 +5,9 @@ class ApplicationController < ActionController::Base
   	@current_bike = Bike.find_by(params[:id])
   end
   	helper_method :current_bike
+
+  def box_is_checked?
+    @bike.safe.tire_pressure == 1
+  end
+    helper_method :box_is_checked
 end
