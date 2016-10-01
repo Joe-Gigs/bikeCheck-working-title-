@@ -16,9 +16,6 @@ Rails.application.routes.draw do
   get '/new_bike', to: 'bikes#new'
   post '/new_bike', to: 'bikes#create'
 
-  # get '/bikes/:bike_id/safety_checks', to: 'safety_checks#new', as: :new_safety_check
-  # post '/bikes/:bike_id/safety_checks', to: 'safety_checks#create', as: :create_safety_check
-
   get '/bikes/:bike_id/safety_checks', to: 'safety_checks#get_message', as: :get_message
   post '/bikes/:bike_id/safety_checks', to: 'safety_checks#message_update', as: :bike_message_update
 end
