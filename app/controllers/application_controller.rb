@@ -9,5 +9,5 @@ class ApplicationController < ActionController::Base
   def bike_is_safe
     @bike.safety_check.quick_release === true && @bike.safety_check.wheels_spin_right == true && @bike.safety_check.brakes == true && @bike.safety_check.chain == true && @bike.safety_check.tools == true && @bike.safety_check.tire_pressure == true && @bike.safety_check.tire_tread == true
   end
-  helper_method :bike_is_safe
+    helper_method :bike_is_safe
 end

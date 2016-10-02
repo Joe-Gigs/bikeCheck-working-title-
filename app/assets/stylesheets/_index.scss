@@ -1,86 +1,67 @@
 body {
-	background-color: #A4B8C4
+    background-color: #A4B8C4
 }
-
 li {
-	color: #C9DAEA
+    color: #C9DAEA
 }
 .bgThemeColor {
-	background-color: #242F40;
+    background-color: #242F40;
 }
-
 .navbar-light .navbar-nav .nav-link {
-	float: right;
-	color: #C9DAEA;
-	}
-
+    float: right;
+    color: #C9DAEA;
+}
 #console-view {
-
-.bgColorLight, {
-	margin-top: 10px;
-	margin-left: 50px;
-	height: 42vh;
-  background-color: #C9DAEA;
-  width: 20%;
+    .bgColorLight {
+        margin-top: 10px;
+        margin-left: 50px;
+        height: 42vh;
+        background-color: #C9DAEA;
+        width: 20%;
+    }
+    .bgColorDark {
+        background-color: #191516;
+        width: 60%;
+        border-width: 0 2px;
+        margin-top: 10px;
+        margin-left: 70px;
+        height: 42vh;
+        color: white;
+    }
+    .bikeStats {
+        background-color: #191516;
+        width: 60%;
+        border-width: 0 2px;
+        margin-top: 10px;
+        margin-left: 70px;
+        height: 42vh;
+        color: white;
+    }
+    .bikesBox {
+        margin-top: 10px;
+        margin-left: 50px;
+        height: 45vh;
+        background-color: #C9DAEA;
+        width: 20%;
+    }
+    .bulletinBoard {
+        margin-top: 10px;
+        margin-left: 50px;
+        height: 43vh;
+        background-color: #C9DAEA;
+        width: 20%;
+    }
+    .listStyle li {
+        background-color: #C9DAEA;
+        color: black;
+        padding: 15px;
+    }
+    ul.list-group:after {
+        clear: both;
+        display: block;
+        content: "";
+    }
+    .list-group-item {
+        border: none;
+    }
 }
-
-.bgColorDark {
-	  background-color: #191516;
-    width: 60%;
-    border-width: 0 2px;
-    margin-top: 10px;
-    margin-left: 70px;
-    height: 42vh;
-    color: white;
-}
-
-.bikeStats {
-	  background-color: #191516;
-    width: 60%;
-    border-width: 0 2px;
-    margin-top: 10px;
-    margin-left: 70px;
-    height: 42vh;
-    color: white;
-}
-
-.bikesBox {
-	margin-top: 10px;
-	margin-left: 50px;
-	height: 45vh;
-  background-color: #C9DAEA;
-  width: 20%;
-}
-
-.bulletinBoard {
-	margin-top: 10px;
-	margin-left: 50px;
-	height: 43vh;
-  background-color: #C9DAEA;
-  width: 20%;
-	}
-
-	.listStyle li{
-		background-color: #C9DAEA;
-		color: black;
-		padding: 15px;
-	}
-
-	ul.list-group:after {
-  	clear: both;
-  	display: block;
-  	content: "";
-}
-
-.list-group-item {
-    border: none;
-	}
-}
-
-.checkBox {
-
-
-}
-
-
-
