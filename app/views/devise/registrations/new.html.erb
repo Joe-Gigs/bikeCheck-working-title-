@@ -20,6 +20,16 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+  <div class="field">
+    <%= f.label :First_Name %><br />
+    <%= f.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Last_Name %><br />
+    <%= f.text_field :lname %>
+  </div>
  
   <div class="actions">
     <%= f.submit "Sign up" %>
@@ -27,3 +37,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
