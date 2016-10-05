@@ -1,34 +1,34 @@
-<%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update',html: {class: "list-group"}, remote: true do |safe| %>
-<!-- <div class="form-check">
- -->   <li class="list-group-item">
+<%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update',html: {id: 'foo'}, remote: true do |safe| %>
+<ul class="list-group">
+   <li class="list-group-item">
    <%= safe.hidden_field :tire_pressure %>
    <%= safe.check_box :tire_pressure, checked: @bike.safety_check.tire_pressure %>Tire Pressure
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :tire_tread %>
    <%= safe.check_box :tire_tread, checked: @bike.safety_check.tire_tread %>Tire Treads
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :quick_release %>
    <%= safe.check_box :quick_release, checked: @bike.safety_check.quick_release %>Quick Release Parts
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :wheels_spin_right %>
    <%= safe.check_box :wheels_spin_right, checked: @bike.safety_check.wheels_spin_right %>Check Wheel Alignment
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :brakes %>
    <%= safe.check_box :brakes, checked: @bike.safety_check.brakes %>Check Brake Function
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :chain %>
    <%= safe.check_box :chain, checked: @bike.safety_check.chain %> Check Chain
    </li>
-   <li class="list-group-item"">
+   <li class="list-group-item">
    <%= safe.hidden_field :tools %>
    <%= safe.check_box :tools, checked: @bike.safety_check.tools %>Bring tools?
    </li>
    <%= safe.submit 'Save', class: 'click' %>
-<!-- </div>
- -->
+</ul>
+
 <% end %>
