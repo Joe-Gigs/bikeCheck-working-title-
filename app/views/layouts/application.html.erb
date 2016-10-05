@@ -2,25 +2,24 @@
 <html>
    <head>
       <title>BikeCheck v0.0.1</title>
-		  <%= favicon_link_tag 'Bike.ico' %>
+      <%= favicon_link_tag 'Bike.ico' %>
       <%= csrf_meta_tags %>
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    </head>
    <body>
-         <div class="dropdown-holder"></div>
+      <div class="dropdown-holder"></div>
       <% if notice %>
-            <div class="notice success alert-success"><%= notice %></div>
-        <% elsif alert %>
-            <div class="alert alert-danger"><%= alert %></div>
-        <% end %>
+      <div class="notice success alert-success"><%= notice %></div>
+      <% elsif alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
       <nav class="navbar navbar-light bgThemeColor">
          <ul class="nav navbar-nav">
             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
-<!--             <li>Welcome <%#= current_user.email if current_user %></li>           
- -->         </ul>
-          <%= image_tag('bike_logo.png', class:'logo')  %>
-          </>
+         </ul>
+         <%= image_tag('bike_logo.png', class:'logo')  %>
+         <span class="welcome">Welcome <%= current_user.email if current_user %></span>
       </nav>
       <%= yield %>
    </body>

@@ -40,7 +40,7 @@ li {
     .bikesBox {
         margin-top: 10px;
         margin-left: 50px;
-        height: 45vh;
+        height: 42vh;
         background-color: #C9DAEA;
         width: 20%;
         overflow: auto;
@@ -48,7 +48,7 @@ li {
     .bulletinBoard {
         margin-top: 10px;
         margin-left: 50px;
-        height: 43vh;
+        height: 42vh;
         background-color: #C9DAEA;
         width: 20%;
     }
@@ -70,7 +70,10 @@ li {
 .logo {
     width: 70px;
     height: 65px;
-    margin-left: 10px;
+    margin-left: 5px;
+}
 
-
+.welcome {
+    color: white;
+    margin-left: 10px; 
 }
