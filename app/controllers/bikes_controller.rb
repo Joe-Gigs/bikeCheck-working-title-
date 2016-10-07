@@ -36,7 +36,6 @@ class BikesController < ApplicationController
 		@bike = Bike.find(params[:id])
 		@bike.destroy
 		flash[:notice] = "Bike Deleted"
-		@apps = current_user.apps
 	end
 
 private

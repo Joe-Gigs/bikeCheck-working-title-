@@ -1,0 +1,20 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">
+  Remove Bike
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+       <div class="modal-body">
+          Are you sure you want to delete<br/>
+          <%= @bike.brand %> ?
+          <div class="btns">
+            <div class="btn btn-lg btn-default cancel-btn" data-dismiss="modal">Cancel</div>
+            <%= link_to 'Delete', bike_path(@bike), method: :delete, class:'btn btn-danger confirm-btn btn-lg', remote: true%>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

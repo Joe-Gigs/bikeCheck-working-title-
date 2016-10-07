@@ -12,10 +12,10 @@ Rails.application.routes.draw do
     resources :safety_checks, except: [:create, :update] do
     end
   end
-
+  #create bikes
   get '/new_bike', to: 'bikes#new'
   post '/new_bike', to: 'bikes#create'
-
+  #create safety checks
   get '/bikes/:bike_id/safety_checks', to: 'safety_checks#get_message', as: :get_message
   post '/bikes/:bike_id/safety_checks', to: 'safety_checks#message_update', as: :bike_message_update
 end
