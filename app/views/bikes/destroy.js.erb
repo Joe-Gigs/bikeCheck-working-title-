@@ -1,1 +1,15 @@
-$('.removeBike').html('<%= j render partial: 'partials/new' %>');
+$('#deleteModal').remove();
+$('body').removeClass('modal-open');
+$('.modal-backdrop').remove();
+
+
+
+$('.bikesBox').html('<%= j render 'partials/user_bikes'%>');
+$('.bulletinBoard').html('');
+
+
+setTimeout(function () {
+  $('.success, .alert').slideUp();
+}, 3000);
+<% flash[:notice] = nil; flash[:alert] = nil %>
+

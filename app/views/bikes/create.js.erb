@@ -1,4 +1,8 @@
 $('.bikesBox').html("<%= j render partial: 'partials/user_bikes' %>");
+$('#addBikeModal').remove();
+
+$('body').removeClass('modal-open');
+$('.modal-backdrop').remove();
 $('.dropdown-holder').after("<%= j render 'partials/flash_messages' %>");
 setTimeout(function () {
   $('.success, .alert').slideUp();
