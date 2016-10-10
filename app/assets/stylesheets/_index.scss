@@ -1,4 +1,3 @@
-
 body {
     background-color: #A4B8C4
 }
@@ -14,17 +13,17 @@ li {
 }
 #console-view {
     .bgColorLight {
-        margin-top: 10px;
+        margin-top: 8px;
         margin-left: 50px;
         height: 42vh;
         background-color: #C9DAEA;
         width: 20%;
     }
-    .bgColorDark {
+    .multiBox {
         background-color: #191516;
         width: 60%;
-        border-width: 0 2px;
-        margin-top: 10px;
+        // border-width: 0 2px;
+        margin-top: 8px;
         margin-left: 70px;
         height: 42vh;
         color: white;
@@ -34,13 +33,13 @@ li {
         background-color: #191516;
         width: 60%;
         border-width: 0 2px;
-        margin-top: 10px;
+        margin-top: 8px;
         margin-left: 70px;
         height: 42vh;
         color: white;
     }
     .bikesBox {
-        margin-top: 10px;
+        margin-top: 8px;
         margin-left: 50px;
         height: 42vh;
         background-color: #C9DAEA;
@@ -80,7 +79,22 @@ li {
     margin-left: 10px; 
 }
 
-#deleteModal {
-   
+.index0 {
+    background-color: #0daf4a;
+    height: 15px;
+    width: 100px;
+    float: left;
 }
 
+.index1 {
+    background-color: #05c3fb;
+    height: 15px;
+    width: 100px;
+    float: left;
+}
+
+.optionBar {
+    background-color: #191516;
+    width: 100%;
+    height: 15px;
+}
