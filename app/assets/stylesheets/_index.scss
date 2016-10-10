@@ -1,3 +1,4 @@
+
 body {
     background-color: #A4B8C4
 }
@@ -27,6 +28,7 @@ li {
         margin-left: 70px;
         height: 42vh;
         color: white;
+        overflow: auto;
     }
     .bikeStats {
         background-color: #191516;
