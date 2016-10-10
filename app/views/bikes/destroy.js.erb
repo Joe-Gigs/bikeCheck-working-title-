@@ -2,10 +2,12 @@ $('#deleteModal').remove();
 $('body').removeClass('modal-open');
 $('.modal-backdrop').remove();
 
-
-
 $('.bikesBox').html('<%= j render 'partials/user_bikes'%>');
 $('.bulletinBoard').html('');
+$('.bikeStats').html('');
+$('.bgColorDark').html('');
+
+
 
 
 setTimeout(function () {

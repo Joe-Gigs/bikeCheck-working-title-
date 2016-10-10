@@ -30,6 +30,8 @@ class BikesController < ApplicationController
 
 	def update
 		@bike = Bike.find(params[:id])
+		@bike.update_attributes(bike_params)
+		@bike.save
 	end
 
 	def destroy
