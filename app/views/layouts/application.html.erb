@@ -19,7 +19,9 @@
             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
          </ul>
          <%= image_tag('bike_logo.png', class:'logo')  %>
-         <span class="welcome">Welcome <%= current_user.fname if current_user %></span>
+         <% if current_user %>
+         <span class="welcome">Welcome <%= current_user.fname %></span>
+         <% end %>
       </nav>
       <%= yield %>
    </body>
