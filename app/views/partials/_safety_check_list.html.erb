@@ -1,5 +1,5 @@
 <%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update',html: {id: 'foo'}, remote: true do |safe| %>
-<ul class="list-group">
+<ul class="list-group safetyStyle">
    <li class="list-group-item">
    <%= safe.hidden_field :tire_pressure %>
    <%= safe.check_box :tire_pressure, checked: @bike.safety_check.tire_pressure %>Tire Pressure

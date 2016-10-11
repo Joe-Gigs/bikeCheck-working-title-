@@ -1,5 +1,6 @@
 body {
-    background-color: #A4B8C4
+    background-color: #A4B8C4;
+    overflow: hidden;
 }
 li {
     color: #C9DAEA
@@ -22,12 +23,12 @@ li {
     .multiBox {
         background-color: #191516;
         width: 60%;
-        // border-width: 0 2px;
+        border-width: 0 2px;
         margin-top: 8px;
         margin-left: 70px;
         height: 42vh;
         color: white;
-        overflow: auto;
+        //overflow-y: auto;
     }
     .bikeStats {
         background-color: #191516;
@@ -66,6 +67,10 @@ li {
     .list-group-item {
         border: none;
     }
+    .list-group {
+        overflow-y: auto;
+
+    }
 }
 
 .logo {
@@ -79,14 +84,14 @@ li {
     margin-left: 10px; 
 }
 
-.index0 {
+.index1 {
     background-color: #0daf4a;
     height: 15px;
     width: 100px;
     float: left;
 }
 
-.index1 {
+.index2 {
     background-color: #05c3fb;
     height: 15px;
     width: 100px;
@@ -98,3 +103,8 @@ li {
     width: 100%;
     height: 15px;
 }
+
+
+
+
+
