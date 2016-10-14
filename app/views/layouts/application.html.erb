@@ -15,8 +15,19 @@
       <div class="alert alert-danger"><%= alert %></div>
       <% end %>
       <nav class="navbar navbar-light bgThemeColor">
+         <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+               <li class="dropdown-item" <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
+               <li class="dropdown-item" <%= render partial:'partials/add_bike_button', remote: true %></li>
+            </ul>
+         </div>
          <ul class="nav navbar-nav">
-            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
+            <span class="addBike"></span>
+            <span id="deleteButtonHolder"></span>
+            <li></li>
          </ul>
          <%= image_tag('bike_logo.png', class:'logo')  %>
          <% if current_user %>

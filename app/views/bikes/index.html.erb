@@ -1,23 +1,35 @@
 <div class="col-md-12 col-lg-12 " id="console-view">
-   <span class="addBike"><%= render partial:'partials/add_bike_button', remote: true %></span>
-   <span id="deleteButtonHolder"></span>
-   <div class="row">
-      <div class="bikesBox col-md-4">
-         <%= render 'partials/user_bikes', remote: true %>
-      </div>
-      <div class="bikeStats col-md-4">
-         D3 sexiness coming soon :D
-      </div>
-   </div>
-   <div class="row">
-      <div class="bulletinBoard col-md-4"> 
-      </div>
-      <div class="multiBox col-md-4">
-         <div class="optionBar">
-            <div class="index1"></div>
-            <div class="index2"></div>
-         </div>
-         <div class="content"></div>
-      </div>
-   </div>
+ 
+  <div class="row">
+    <div class="bikesBox col-md-4">
+      <%= render 'partials/user_bikes', remote: true %>
+    </div>
+    <div class="bikeStats col-md-4">
+      D3 sexiness coming soon :D
+    </div>
+  </div>
+  <div class="row">
+    <div class="bulletinBoard col-md-4"> 
+    </div>
+    <div class="multiBox col-md-4">
+      <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">Tab 1</a></li>
+        <li><a href="#tab-2">Tab 2</a></li>
+        <li><a href="#tab-3">Tab 3</a></li>
+        <li><a href="#tab-4">Tab 4</a></li>
+      </ul>
+      <div class="content"></div>
+    </div>
+  </div>
 </div>
+
+<script>$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});</script>
