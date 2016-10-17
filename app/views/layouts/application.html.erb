@@ -4,7 +4,7 @@
       <title>BikeCheck v0.0.1</title>
       <%= favicon_link_tag 'Bike.ico' %>
       <%= csrf_meta_tags %>
-      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    </head>
    <body>
@@ -17,22 +17,23 @@
       <nav class="navbar navbar-light bgThemeColor">
          <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            <% if current_user %>
+            <span class="welcome">Welcome <%= current_user.fname %></span>
+            <% end %>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-               <li class="dropdown-item" <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %></li>
-               <li class="dropdown-item" <%= render partial:'partials/add_bike_button', remote: true %></li>
+               <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+               <li><%#= link_to 'New Bike', new_bike_path, remote: true %></li>
+               <li></li>
             </ul>
          </div>
+         <%= render partial:'partials/add_bike_button', remote: true %>
+         <span id="deleteButtonHolder"></span>
          <ul class="nav navbar-nav">
             <span class="addBike"></span>
-            <span id="deleteButtonHolder"></span>
             <li></li>
          </ul>
          <%= image_tag('bike_logo.png', class:'logo')  %>
-         <% if current_user %>
-         <span class="welcome">Welcome <%= current_user.fname %></span>
-         <% end %>
       </nav>
       <%= yield %>
    </body>
