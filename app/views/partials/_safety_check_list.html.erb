@@ -1,5 +1,6 @@
-<%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update', id: 'formStyle', remote: true do |safe| %>
-<ul class="list-group safetyStyle">
+<%= form_for :safety_check, url: bike_message_update_path(@bike), action: 'message_update', html: {
+ id: 'formStyle'}, remote: true do |safe| %>
+<ul class="list-group">
    <li class="list-group-item">
    <%= safe.hidden_field :tire_pressure %>
    <%= safe.check_box :tire_pressure, checked: @bike.safety_check.tire_pressure %>Tire Pressure
@@ -28,10 +29,6 @@
    <%= safe.hidden_field :tools %>
    <%= safe.check_box :tools, checked: @bike.safety_check.tools %>Bring tools?
    </li>
-   <li>TEST</li>
-   <li>TEST</li>
-   <li>TEST</li>
-   <li>TEST</li>
 </ul>
    <%= safe.submit 'Save', class: 'click' %>
 <% end %>
